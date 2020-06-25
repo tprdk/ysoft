@@ -1,0 +1,73 @@
+﻿<Window x:Class="ysoft.AddEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ysoft"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="YSOFT IK SISTEMI" Height="650" Width="903" Icon="resources/icon.png"
+        ResizeMode="NoResize">
+    <Grid>
+        <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="resources\addemp.jpg" RenderTransformOrigin="0.499,0.504" Margin="10,0,0.2,-0.2"/>
+        <ComboBox Name="cmb_role" SelectionChanged="role_ComboBox_SelectionChanged" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Margin="350,248,0,0" VerticalAlignment="Top" Width="185" Height="35" RenderTransformOrigin="0.493,0.496"/>
+        <ComboBox Name="cmb_salary" SelectionChanged="salary_ComboBox_SelectionChanged" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Margin="350,320,0,0" VerticalAlignment="Top" Width="185" Height="35"/>
+        <Label Content="Name" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Berlin Sans FB" Margin="291,115,532.8,0" VerticalAlignment="Top" Width="73" Height="35" RenderTransformOrigin="0.863,0.57"/>
+        <Label Content="Surname" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Berlin Sans FB" Margin="272,179,551.8,0" VerticalAlignment="Top" Height="35" RenderTransformOrigin="-1.148,4.197" Width="73"/>
+        <Label Content="Role" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Berlin Sans FB" Margin="291,248,551.8,0" VerticalAlignment="Top" RenderTransformOrigin="0.477,-1.535" Width="54" Height="35"/>
+        <Label Content="Salary Plan" HorizontalAlignment="Center" VerticalContentAlignment="Center" FontFamily="Berlin Sans FB" Margin="272,320,546.8,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="-0.482,3.152" Height="35"/>
+        <TextBox Name="name_text" 
+                 HorizontalContentAlignment="Center" 
+                 VerticalContentAlignment="Center" 
+                 Background="#FFE2E0E0" 
+                 FontFamily="Berlin Sans FB" 
+                 BorderThickness="0" 
+                 HorizontalAlignment="Left" 
+                 Height="35" 
+                 Margin="350,115,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="Name" 
+                 VerticalAlignment="Top" 
+                 Width="185" 
+                 Foreground="#FF999999" 
+                 RenderTransformOrigin="0.453,0.708" />
+        <TextBox Name="surname_text" 
+                 HorizontalContentAlignment="Center" 
+                 VerticalContentAlignment="Center"
+                 Background="#FFE2E0E0"
+                 Foreground="#FF999999" 
+                 FontFamily="Berlin Sans FB"
+                 BorderThickness="0"  
+                 HorizontalAlignment="Left" 
+                 Height="35"
+                 Margin="350,179,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="Surname"
+                 VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.453,0.708" />
+        <Button Name="saveBttn" Click="saveBttn_Click" Content="Save Employee" FontFamily="Berlin Sans FB" Foreground="#FFEAEAEA" Background="#FF55A263" BorderBrush="#FF55A263" Margin="350,399,361.8,0" VerticalAlignment="Top" Height="35">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="backBttn"  
+                Foreground="#FFEAEAEA" 
+                FontFamily="Berlin Sans FB" 
+                Background="#FF55A263" 
+                BorderBrush="#FF55A263" 
+                Content="Back" 
+                HorizontalAlignment="Left" 
+                Margin="664,556,0,0" 
+                VerticalAlignment="Top" 
+                Width="190" Height="35" 
+                FontSize="16" 
+                Click="backBttn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
